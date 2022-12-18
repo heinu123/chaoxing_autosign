@@ -1,0 +1,5 @@
+APScheduler==3.7.0
+click==7.1.2
+aiohttp==3.7.4.post0
+lxml==4.6.2
+beautifulsoup4==4.9.3
