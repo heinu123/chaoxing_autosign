@@ -49,7 +49,16 @@ latitude=31.228518
 [clientip]
 ip=0.0.0.0
 ```
-
+## user.json配置
+```
+[
+    {
+        'username': '',# 学习通账号
+        'password': '', # 学习通密码
+        'schoolid': ''  # 学号登录才需要填写
+    },
+]
+```
 
 ## 运行
 ```
