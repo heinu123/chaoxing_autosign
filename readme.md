@@ -62,6 +62,7 @@ ip=0.0.0.0
 
 ## 运行
 ```
+pip install -r requirements.txt #安装依赖
 python main.py
 ```
 或者直接运行[releases](https://github.com/mkdir700/chaoxing_auto_sign/tree/latest/api)里的编译后的可执行文件
