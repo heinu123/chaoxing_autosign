@@ -23,6 +23,24 @@ mode=sign
 MINUTES=5
 SECONDS=0
 ```
+> 推送模式
+telegram 使用telegram机器人发送签到成功消息
+server 使用server酱发送签到成功消息
+all 两个一起
+```
+[push]
+mode=server
+```
+
+> telegram机器人的token和你的chat_id
+搜索 @MissRose_bot 机器人 启用后发送 /info 指令即可获得你的chat_id
+搜索 @BotFather 机器人生成你的bot 将机器人API token填入token即可
+具体教程谷歌百度一抓一大把
+```
+[telegram]
+token=
+chat_id=
+```
 
 > server酱KEY(签到成功后发送推送消息)
 申请地址:https://sct.ftqq.com/sendkey

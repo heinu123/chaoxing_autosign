@@ -11,6 +11,8 @@ MINUTES = initext.get('time', 'MINUTES')
 SECONDS = initext.get('time', 'SECONDS')
 
 SERVER_CHAN_SEND_KEY = initext.get('server', 'key')
+TELEGRAM_BOT_TOKEN = initext.get('telegram', 'token')
+CHAT_ID = initext.get('telegram', 'chat_id')
 
 COOKIES_PATH = "./"
 COOKIES_FILE_PATH = COOKIES_PATH + "cookies.json"
