@@ -15,6 +15,7 @@ from bs4 import BeautifulSoup
 from config import *
 from log import logger
 from message import server_chan_send
+from message import telegram_bot_send
 
 
 class AutoSign(object):
@@ -23,9 +24,10 @@ class AutoSign(object):
         """初始化就进行登录"""
         self.headers = {
             'Accept-Encoding': 'gzip, deflate',
-            'Accept-Language': 'zh-CN,zh;q=0.9',
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-            'User-Agent': 'Dalvik/2.1.0 (Linux; U; Android 11; M2007J3SC Build/RKQ1.200826.002) (device:M2007J3SC) Language/zh_CN com.chaoxing.mobile/ChaoXingStudy_3_5.1.3_android_phone_613_74',
+            'Accept-Language': 'zh_CN',
+            'X-Requested-With': 'com.chaoxing.mobile',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+            'User-Agent': 'Mozilla/5.0 (Linux; Android 12; 21121210C Build/SKQ1.211006.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/108.0.5359.128 Mobile Safari/537.36 Language/zh_CN com.chaoxing.mobile/ChaoXingStudy_3_6.0.8_android_phone_902_99 (@Kalimdor)',
         }
         self.session = ClientSession(headers=self.headers)
         self.username = username
@@ -225,10 +227,9 @@ class AutoSign(object):
             'courseId': course['course_id'],
             'jclassId': course['class_id']
         }
-        # TODO： 此处使用的是老版本，后续计划将替换为新版本接口
         async with self.session.request(
             method='GET',
-            url="https://mobilelearn.chaoxing.com/widget/pcpick/stu/index",
+            url="https://mooc1-api.chaoxing.com/mycourse/backclazzdata?view=json",
             verify_ssl=False,
             params=params,
         ) as resp:
