@@ -1,7 +1,12 @@
+# 学习通账号密码,可添加多个账号
+#username 学习通账号名(一般是手机号)
+#password 学习通账密码
+#schoolid 学号(不是学号登陆为空即可)
+#可以添加多个账号
 [
     {
-        'username': '',# 学习通账号
-        'password': '', # 学习通密码
+        'username': '',
+        'password': '',
         'schoolid': ''  # 学号登录才需要填写
     },
 ]
