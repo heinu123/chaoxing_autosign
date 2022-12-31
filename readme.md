@@ -1,5 +1,8 @@
 >**本项目基于https://github.com/mkdir700/chaoxing_auto_sign/tree/master/local 修改**
 
+>**因本人已放寒假不需要上网课，无法排除可能存在的bug。如果遇到bug可以提交issues
+
+
 ## 相关配置
 
 **mode.ini**是签到脚本的配置文件
